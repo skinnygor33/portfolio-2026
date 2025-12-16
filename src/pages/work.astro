@@ -1,0 +1,475 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Experience | Emilia Arriaga";
+---
+
+<Layout title={title}>
+  
+  <div class="fixed inset-0 -z-50 wood-pattern"></div>
+
+  <div class="fixed inset-0 pointer-events-none z-[-10] bg-[radial-gradient(ellipse_at_center,_transparent_20%,_rgba(40,30,20,0.3)_100%)] mix-blend-multiply"></div>
+
+  <div class="fixed inset-0 z-[-45] overflow-hidden pointer-events-none opacity-30">
+      <svg class="absolute top-20 left-10 w-6 h-6 text-[#fffdf5]/20 animate-spin-very-slow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+      <svg class="absolute top-40 right-20 w-8 h-8 text-[#fffdf5]/20 animate-spin-reverse-slow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+      <svg class="absolute top-[40vh] left-32 w-4 h-4 text-[#fffdf5]/20 animate-spin-very-slow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+  </div>
+
+
+  <main class="w-full relative selection:bg-velvet selection:text-paper min-h-screen">
+
+    <section class="pt-32 pb-12 px-6 flex flex-col items-center text-center relative z-10">
+        <div class="text-[#fffdf5]/40 mb-4 text-xl tracking-widest">✦ ═══════ι▬▬ ✦</div>
+        
+        <h1 class="font-serif text-6xl md:text-8xl italic text-[#fffdf5] drop-shadow-md mb-6 relative z-10">
+            Professional Dossier
+        </h1>
+        
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-[#fffdf5]/60 mb-16">Skills & Expertise</p>
+
+        <div class="max-w-2xl w-full flex flex-col md:flex-row items-center justify-center gap-8 mb-64 animate-fade-in-up relative">
+            <div class="text-[#fffdf5]/40">
+                <svg class="w-8 h-8 animate-spin-slow drop-shadow-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+            </div>
+            
+            <p class="font-serif italic text-xl md:text-2xl text-[#fffdf5]/90 leading-relaxed text-center drop-shadow-md">
+                Evidence of capability. Here lies the collection of my tactical instincts and the technical arsenal used to dismantle complex problems.
+            </p>
+            
+            <div class="text-[#fffdf5]/40">
+                <svg class="w-8 h-8 animate-spin-slow drop-shadow-md" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <div id="skills-section" class="flex flex-col items-center space-y-32 pb-40 px-6 relative z-10">
+
+      <div class="w-full max-w-5xl relative group">
+          <div class="text-center mb-12">
+              <h2 class="font-serif text-4xl md:text-5xl italic text-[#fffdf5] drop-shadow-md mb-2 relative z-10">Instincts</h2>
+              <p class="font-sans text-xs tracking-[0.3em] uppercase text-[#fffdf5]/60 relative z-10">Soft Skills</p>
+          </div>
+
+          <button onclick="scrollSlider('soft-skills', 'left')" class="absolute left-0 top-[60%] -translate-y-1/2 -ml-2 md:-ml-12 z-20 text-[#fffdf5]/40 hover:text-velvet transition-colors text-6xl font-serif drop-shadow-lg">‹</button>
+          <button onclick="scrollSlider('soft-skills', 'right')" class="absolute right-0 top-[60%] -translate-y-1/2 -mr-2 md:-mr-12 z-20 text-[#fffdf5]/40 hover:text-velvet transition-colors text-6xl font-serif drop-shadow-lg">›</button>
+
+          <div id="soft-skills" class="flex gap-6 overflow-x-auto hide-scrollbar px-3 py-8 flex-nowrap">
+              
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                  <div class="text-3xl text-velvet mb-3 drop-shadow-md">♔</div> 
+                  <h3 class="font-serif text-xl italic text-ink mb-2">Strategic Logic</h3>
+                  <p class="font-sans text-xs text-bruise/80 leading-relaxed">
+                      Tracing the narrative of errors. Dismantling problems to find root causes.
+                  </p>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                   <div class="text-3xl text-velvet mb-3 drop-shadow-md">♛</div>
+                  <h3 class="font-serif text-xl italic text-ink mb-2">Leadership</h3>
+                  <p class="font-sans text-xs text-bruise/80 leading-relaxed">
+                      Command presence in competitions. Guiding teams through ambiguity decisively.
+                  </p>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                   <div class="text-3xl text-velvet mb-3 drop-shadow-md">☍</div>
+                  <h3 class="font-serif text-xl italic text-ink mb-2">Collaboration</h3>
+                  <p class="font-sans text-xs text-bruise/80 leading-relaxed">
+                      Collective intelligence. Synergizing diverse tactical approaches.
+                  </p>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                   <div class="text-3xl text-velvet mb-3 drop-shadow-md">✦</div>
+                  <h3 class="font-serif text-xl italic text-ink mb-2">Translation</h3>
+                  <p class="font-sans text-xs text-bruise/80 leading-relaxed">
+                      Fluent in both machine code and human language. Bridging technical gaps.
+                  </p>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                   <div class="text-3xl text-velvet mb-3 drop-shadow-md">∞</div>
+                  <h3 class="font-serif text-xl italic text-ink mb-2">Resilience</h3>
+                  <p class="font-sans text-xs text-bruise/80 leading-relaxed">
+                      Adapting faster than tech shifts. Comfortable in the use of new frameworks and code.
+                  </p>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                   <div class="text-3xl text-velvet mb-3 drop-shadow-md">👁</div>
+                  <h3 class="font-serif text-xl italic text-ink mb-2">Observation</h3>
+                  <p class="font-sans text-xs text-bruise/80 leading-relaxed">
+                      Noticing details others miss. Finding security in the smallest anomalies.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="w-full max-w-5xl relative group">
+          <div class="text-center mb-12">
+              <h2 class="font-serif text-4xl md:text-5xl italic text-[#fffdf5] drop-shadow-md mb-2 relative z-10">Arsenal</h2>
+              <p class="font-sans text-xs tracking-[0.3em] uppercase text-[#fffdf5]/60 relative z-10">Hard Skills</p>
+          </div>
+
+          <button onclick="scrollSlider('hard-skills', 'left')" class="absolute left-0 top-[60%] -translate-y-1/2 -ml-2 md:-ml-12 z-20 text-[#fffdf5]/40 hover:text-velvet transition-colors text-6xl font-serif drop-shadow-lg">‹</button>
+          <button onclick="scrollSlider('hard-skills', 'right')" class="absolute right-0 top-[60%] -translate-y-1/2 -mr-2 md:-mr-12 z-20 text-[#fffdf5]/40 hover:text-velvet transition-colors text-6xl font-serif drop-shadow-lg">›</button>
+
+          <div id="hard-skills" class="flex gap-6 overflow-x-auto hide-scrollbar px-3 py-8 flex-nowrap">
+              
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                  <span class="font-mono text-[9px] tracking-widest border border-ink/20 px-2 py-1 rounded mb-3 text-ink/60 bg-ink/5">OFFENSIVE</span>
+                  <h3 class="font-serif text-xl italic text-ink mb-3">Penetration Testing</h3>
+                  <ul class="font-sans text-xs text-bruise/80 space-y-1 border-t border-bruise/10 pt-3 w-full">
+                      <li>Kali Linux</li>
+                      <li>Privilege Escalation</li>
+                      <li>Burp Suite</li>
+                      <li>Metasploit</li>
+                      <li>Bash</li>
+                      <li>SQLmap</li>
+                  </ul>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                  <span class="font-mono text-[9px] tracking-widest border border-ink/20 px-2 py-1 rounded mb-3 text-ink/60 bg-ink/5">NETWORKING</span>
+                  <h3 class="font-serif text-xl italic text-ink mb-3">Analysis</h3>
+                  <ul class="font-sans text-xs text-bruise/80 space-y-1 border-t border-bruise/10 pt-3 w-full">
+                      <li>Nmap Recon</li>
+                      <li>OSI model</li>
+                      <li>TCP/IP protocols</li>
+                  </ul>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                  <span class="font-mono text-[9px] tracking-widest border border-ink/20 px-2 py-1 rounded mb-3 text-ink/60 bg-ink/5">BUILDER</span>
+                  <h3 class="font-serif text-xl italic text-ink mb-3">Development</h3>
+                  <ul class="font-sans text-xs text-bruise/80 space-y-1 border-t border-bruise/10 pt-3 w-full">
+                      <li>Python</li>
+                      <li>C</li>
+                      <li>SQL</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Javascript</li>
+                  </ul>
+              </div>
+
+              <div class="w-60 h-60 paper-card p-6 flex flex-col justify-center items-center text-center hover:-translate-y-3 transition-all duration-500 flex-shrink-0">
+                  <span class="font-mono text-[9px] tracking-widest border border-ink/20 px-2 py-1 rounded mb-3 text-ink/60 bg-ink/5">LINGUISTICS</span>
+                  <h3 class="font-serif text-xl italic text-ink mb-3">Languages</h3>
+                  <ul class="font-sans text-xs text-bruise/80 space-y-1 border-t border-bruise/10 pt-3 w-full">
+                      <li>Spanish (Native)</li>
+                      <li>English (TOEFL IBT: 92 pts)</li>
+                      <li>Swedish (A1)</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <section class="relative w-full bg-[#fdfbf7] py-32 px-6 z-20 overflow-hidden rounded-t-[3rem] shadow-[0_-30px_60px_rgba(0,0,0,0.3)]">
+        <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-[1px] bg-bruise/10"></div>
+        <div class="max-w-6xl mx-auto relative">
+            
+            <div class="text-center mb-32 relative z-10 bg-[#fdfbf7] py-8">
+                <div class="text-bruise/30 mb-6 text-sm tracking-widest">✧ RECORD BEGINS ✧</div>
+                <h2 class="font-serif text-5xl md:text-6xl italic text-[#2a1f1a] drop-shadow-md mb-4">Chronology</h2>
+                <p class="font-sans text-xs tracking-[0.3em] uppercase text-bruise/60">The Path So Far</p>
+                <div class="w-24 h-[1px] bg-bruise/20 mx-auto mt-8"></div>
+            </div>
+
+            <div class="timeline-block flex flex-col md:flex-row items-start justify-center gap-12 md:gap-24 mb-40 opacity-20 transition-all duration-1000 relative">
+                 <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 text-bruise/20 text-2xl hidden md:block">∿</div>
+                <div class="md:w-1/3 md:text-right sticky top-1/2 -translate-y-1/2">
+                    <span class="font-serif text-6xl md:text-8xl text-bruise/20 font-bold drop-shadow-sm">2022</span>
+                    <p class="font-sans text-xs tracking-widest uppercase text-velvet mt-2">The Beginning</p>
+                </div>
+                <div class="md:w-1/2 paper-card p-8 md:p-12 relative group hover:-translate-y-1 transition-transform duration-500">
+                    <div class="absolute -left-3 top-8 w-6 h-1 bg-velvet hidden md:block shadow-sm"></div>
+                    <div class="h-64 w-full mb-8 overflow-hidden border border-bruise/10 shadow-inner">
+                        <img src="/fisunsetaigen.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+                    </div>
+                    <h3 class="font-serif text-3xl italic text-ink mb-2 drop-shadow-sm">Started College</h3>
+                    <p class="font-sans text-bruise/80 leading-relaxed text-sm">
+                        Entered the Faculty of Engineering. The moment curiosity turned into formal discipline. Started building the foundation of logic, algorithms, and structural thinking.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-block flex flex-col md:flex-row-reverse items-start justify-center gap-12 md:gap-24 mb-40 opacity-20 transition-all duration-1000 relative">
+                 <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 text-bruise/20 text-2xl hidden md:block">∿</div>
+                <div class="md:w-1/3 md:text-left sticky top-1/2 -translate-y-1/2">
+                    <span class="font-serif text-6xl md:text-8xl text-bruise/20 font-bold drop-shadow-sm">2024</span>
+                    <p class="font-sans text-xs tracking-widest uppercase text-velvet mt-2">Early Year</p>
+                </div>
+                <div class="md:w-1/2 paper-card p-8 md:p-12 relative group hover:-translate-y-1 transition-transform duration-500">
+                    <div class="absolute -right-3 top-8 w-6 h-1 bg-velvet hidden md:block shadow-sm"></div>
+                    <div class="h-64 w-full mb-8 overflow-hidden border border-bruise/10 shadow-inner">
+                        <img src="/phct.jpeg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+                    </div>
+                    <h3 class="font-serif text-3xl italic text-ink mb-2 drop-shadow-sm">Joined Puma Hat Cybersecurity Team</h3>
+                    <p class="font-sans text-bruise/80 leading-relaxed text-sm">
+                        Selected for the cybersecurity student group of the Faculty of Engineer. Shifted focus from passive learning to active offense. First exposure to real-world CTF dynamics and collaborative hacking.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-block flex flex-col md:flex-row items-start justify-center gap-12 md:gap-24 mb-40 opacity-20 transition-all duration-1000 relative">
+                 <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 text-bruise/20 text-2xl hidden md:block">∿</div>
+                <div class="md:w-1/3 md:text-right sticky top-1/2 -translate-y-1/2">
+                    <span class="font-serif text-6xl md:text-8xl text-bruise/20 font-bold drop-shadow-sm">2024</span>
+                    <p class="font-sans text-xs tracking-widest uppercase text-velvet mt-2">Second Half</p>
+                </div>
+                <div class="md:w-1/2 paper-card p-8 md:p-12 relative group hover:-translate-y-1 transition-transform duration-500">
+                    <div class="absolute -left-3 top-8 w-6 h-1 bg-velvet hidden md:block shadow-sm"></div>
+                    <div class="h-64 w-full mb-8 overflow-hidden border border-bruise/10 shadow-inner">
+                        <img src="/bsides.jpeg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+                    </div>
+                    <h3 class="font-serif text-3xl italic text-ink mb-2 drop-shadow-sm">BSides CDMX</h3>
+                    <p class="font-sans text-bruise/80 leading-relaxed text-sm">
+                        Cybersecurity networking event in Mexico City. Connected with industry leaders and expanded my understanding of the Mexican cybersecurity landscape.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-block flex flex-col md:flex-row-reverse items-start justify-center gap-12 md:gap-24 mb-40 opacity-20 transition-all duration-1000 relative">
+                 <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 text-bruise/20 text-2xl hidden md:block">∿</div>
+                <div class="md:w-1/3 md:text-left sticky top-1/2 -translate-y-1/2">
+                    <span class="font-serif text-6xl md:text-8xl text-bruise/20 font-bold drop-shadow-sm">2025</span>
+                    <p class="font-sans text-xs tracking-widest uppercase text-velvet mt-2">Early Year</p>
+                </div>
+                <div class="md:w-1/2 paper-card p-8 md:p-12 relative group hover:-translate-y-1 transition-transform duration-500">
+                    <div class="absolute -right-3 top-8 w-6 h-1 bg-velvet hidden md:block shadow-sm"></div>
+                    <div class="h-64 w-full mb-8 overflow-hidden border border-bruise/10 shadow-inner">
+                        <img src="/hackgdl.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+                    </div>
+                    <h3 class="font-serif text-3xl italic text-ink mb-2 drop-shadow-sm">HackGDL & Pentest</h3>
+                    <p class="font-sans text-bruise/80 leading-relaxed text-sm">
+                        Traveled to Guadalajara for networking. Simultaneously executed my first professional Pentesting Service, validating vulnerabilities for the Sports Study Center at UNAM.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-block flex flex-col md:flex-row items-start justify-center gap-12 md:gap-24 mb-40 opacity-20 transition-all duration-1000 relative">
+                <div class="md:w-1/3 md:text-right sticky top-1/2 -translate-y-1/2">
+                    <span class="font-serif text-6xl md:text-8xl text-bruise/20 font-bold drop-shadow-sm">2025</span>
+                    <p class="font-sans text-xs tracking-widest uppercase text-velvet mt-2">Second Half</p>
+                </div>
+                <div class="md:w-1/2 paper-card p-8 md:p-12 relative group hover:-translate-y-1 transition-transform duration-500">
+                    <div class="absolute -left-3 top-8 w-6 h-1 bg-velvet hidden md:block shadow-sm"></div>
+                    <div class="h-64 w-full mb-8 overflow-hidden border border-bruise/10 shadow-inner">
+                        <img src="/hackmex.jpeg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+                    </div>
+                    <h3 class="font-serif text-3xl italic text-ink mb-2 drop-shadow-sm">HackMex & Banxico</h3>
+                    <p class="font-sans text-bruise/80 leading-relaxed text-sm">
+                        Competed and classified in <span class="text-velvet">CTF HackMex</span> finale, landing a 7th place (R00tk1t). Participated in the <span class="text-velvet">SPEI Hackathon</span>. Launched advanced Machine Learning projects, integrating AI with security protocols.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center text-bruise/30 mb-6 text-sm tracking-widest">✧ RECORD ENDS (for now) ✧</div>
+
+        </div>
+    </section>
+
+    <section class="relative w-full bg-[#fdfbf7] py-24 px-6 z-20 border-t border-bruise/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-24 relative">
+                <div class="absolute top-1/2 left-0 w-full h-[1px] bg-bruise/10 -z-10"></div>
+                <h2 class="font-serif text-4xl italic text-[#2a1f1a] drop-shadow-md mt-4 mb-4">Personal Projects</h2>
+                <p class="font-sans text-xs tracking-[0.3em] uppercase text-bruise/60">Development & Research</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="paper-card p-8 hover:-translate-y-3 transition-transform duration-500 group">
+                    <div class="card-figure"><span class="font-mono text-[10px] text-velvet border border-velvet/20 inline-block px-2 py-1 rounded bg-velvet/5 group-hover:bg-velvet/10 transition-colors">FINTECH SECURITY</span></div>
+                    <h3 class="font-serif text-2xl text-ink italic mb-2 drop-shadow-sm">Secure Payment Gateway</h3>
+                    <p class="font-sans text-xs text-bruise/60 mb-4 uppercase tracking-wider">Hackathon SPEI Banxico</p>
+                    <p class="font-sans text-sm text-bruise/80 leading-relaxed mb-6">
+                        Designed a conceptual transaction module for the Mexican banking system. Focused on preventing transaction tampering via APIs and NLP.
+                    </p>
+                    <div class="flex gap-2 opacity-60">
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                    </div>
+                </div>
+
+                <div class="paper-card p-8 hover:-translate-y-3 transition-transform duration-500 group">
+                    <div class="card-figure"><span class="font-mono text-[10px] text-velvet border border-velvet/20 inline-block px-2 py-1 rounded bg-velvet/5 group-hover:bg-velvet/10 transition-colors">SOFTWARE DEVELOPMENT</span></div>
+                    <h3 class="font-serif text-2xl text-ink italic mb-2 drop-shadow-sm">Machine Learning model for fraud detection</h3>
+                    <p class="font-sans text-xs text-bruise/60 mb-4 uppercase tracking-wider">Artificial Intelligence</p>
+                    <p class="font-sans text-sm text-bruise/80 leading-relaxed mb-6">
+                        Cleaned and transformed raw financial transaction data, handling missing values and outliers to ensure data quality. Conducted Exploratory Data Analysis (EDA) to identify trends and patterns in fraudulent behavior.
+                    </p>
+                    <div class="flex gap-2 opacity-60">
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                    </div>
+                </div>
+
+                <div class="paper-card p-8 hover:-translate-y-3 transition-transform duration-500 group">
+                    <div class="card-figure"><span class="font-mono text-[10px] text-velvet border border-velvet/20 inline-block px-2 py-1 rounded bg-velvet/5 group-hover:bg-velvet/10 transition-colors">SOFTWARE DEVELOPMENT</span></div>
+                    <h3 class="font-serif text-2xl text-ink italic mb-2 drop-shadow-sm">Masked Language Model for Plank Exercise Correction</h3>
+                    <p class="font-sans text-xs text-bruise/60 mb-4 uppercase tracking-wider">Software Design</p>
+                    <p class="font-sans text-sm text-bruise/80 leading-relaxed mb-6">
+                        Developed a Masked Language Model (MLM) in Python to guide users in performing plank exercises correctly,
+utilizing camera-based detection.
+                    </p>
+                    <div class="flex gap-2 opacity-60">
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                        <span class="w-2 h-2 rounded-full bg-ink/20"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full bg-[#fdfbf7] pt-12 px-6 z-20">
+        <div class="max-w-2xl mx-auto text-center border-t border-bruise/10 pt-24 pb-32">
+            
+            <h2 class="font-serif text-4xl italic text-[#2a1f1a] mb-8 drop-shadow-sm">Access Full Records</h2>
+            
+            <a href="/Emilia_Arriaga_CV.pdf" target="_blank" class="group relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-mono font-medium tracking-tighter text-white bg-[#2a1f1a] rounded-lg cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-300">
+                <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-velvet rounded-full group-hover:w-72 group-hover:h-72"></span>
+                <span class="relative flex items-center gap-2 drop-shadow-md">
+                    DOWNLOAD RESUME
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                </span>
+            </a>
+
+            <p class="mt-6 font-sans text-xs text-bruise/40 tracking-widest">SECURE DOWNLOAD (I promise hehe)</p>
+
+        </div>
+    </section>
+
+    <footer class="w-full py-12 text-center relative z-30 bg-[#fdfbf7] border-t border-bruise/5">
+        <p class="font-sans text-xs tracking-widest text-bruise/60 uppercase">
+            Developed with <span class="text-velvet text-lg align-middle animate-pulse drop-shadow-sm">♥</span> by <span class="font-serif italic text-[#2a1f1a] text-lg normal-case drop-shadow-sm">Macarena</span>
+        </p>
+    </footer>
+
+  </main>
+</Layout>
+
+<script is:inline>
+  function scrollSlider(elementId, direction) {
+    const container = document.getElementById(elementId);
+    if (!container) return;
+    const scrollAmount = 240; 
+    if (direction === 'left') container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    else container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+
+  function setupInfinite(elementId, speed = 0.5) {
+    const container = document.getElementById(elementId);
+    if (!container || container.dataset.infiniteInit) return;
+    container.dataset.infiniteInit = '1';
+
+    const originalItems = Array.from(container.children);
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      container.appendChild(clone);
+    });
+
+    let singleSetWidth = 0;
+    setTimeout(() => { singleSetWidth = container.scrollWidth / 2; }, 50);
+
+    let isHovered = false;
+    const step = () => {
+      if (!isHovered && singleSetWidth > 0) {
+        container.scrollLeft += speed;
+        if (container.scrollLeft >= singleSetWidth) container.scrollLeft -= singleSetWidth;
+      }
+      requestAnimationFrame(step);
+    };
+    step();
+
+    container.addEventListener('mouseenter', () => isHovered = true);
+    container.addEventListener('mouseleave', () => isHovered = false);
+    container.addEventListener('touchstart', () => isHovered = true, { passive: true });
+    container.addEventListener('touchend', () => isHovered = false);
+  }
+
+  function setupTimelineObserver() {
+    if (document.body.dataset.timelineInit) return;
+    document.body.dataset.timelineInit = '1';
+
+    const timelineBlocks = document.querySelectorAll('.timeline-block');
+    if (!timelineBlocks.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-20', 'scale-95', 'blur-sm');
+          entry.target.classList.add('opacity-100', 'scale-100', 'blur-0');
+        } else {
+          entry.target.classList.add('opacity-20', 'scale-95', 'blur-sm');
+          entry.target.classList.remove('opacity-100', 'scale-100', 'blur-0');
+        }
+      });
+    }, { rootMargin: '-20% 0px -20% 0px', threshold: 0.2 });
+
+    timelineBlocks.forEach(block => {
+      block.classList.add('transform', 'scale-95', 'blur-sm', 'transition-all', 'duration-1000');
+      observer.observe(block);
+    });
+  }
+
+  // Simplified initialization - No more scroll-based background observer
+  function init() {
+    setupInfinite('soft-skills', 0.6);
+    setupInfinite('hard-skills', 0.7);
+    setupTimelineObserver();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .paper-card {
+        background-color: #fdfbf7;
+        background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        background-size: 300px;
+        background-blend-mode: multiply;
+        box-shadow: 
+            0 25px 50px -12px rgba(0,0,0,0.35),
+            0 10px 20px -10px rgba(60, 40, 30, 0.2),
+            inset 0 0 80px rgba(166, 139, 115, 0.15); 
+        border-top: 1px solid rgba(255,255,255,0.9);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .wood-pattern {
+        background-color: #6e5c4f; 
+        background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 8px), repeating-linear-gradient(-45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 12px);
+        box-shadow: inset 0 0 200px rgba(0,0,0,0.8);
+    }
+    
+    .animate-spin-slow { animation: spin 12s linear infinite; }
+    .animate-spin-very-slow { animation: spin 20s linear infinite; }
+    .animate-spin-reverse-slow { animation: spinReverse 15s linear infinite; }
+    .animate-fade-in-up { animation: fadeInUp 1.5s ease-out forwards; opacity: 0; transform: translateY(20px); }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes spinReverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+    .card-figure {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+</style>

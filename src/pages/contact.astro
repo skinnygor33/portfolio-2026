@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Contact | Emilia Arriaga";
+---
+
+<Layout title={title}>
+  
+  <div class="fixed inset-0 -z-50 bg-[#e8e4d9]"></div>
+
+  <div class="fixed inset-0 -z-40 opacity-50 mix-blend-multiply pointer-events-none" 
+       style="background-image: url('https://grainy-gradients.vercel.app/noise.svg'); background-size: 400px;">
+  </div>
+
+  <div class="fixed inset-0 -z-30 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(100,90,80,0.15)_100%)] pointer-events-none"></div>
+
+  <div class="fixed inset-0 z-[-20] overflow-hidden pointer-events-none opacity-20">
+      <svg class="absolute top-20 left-10 w-6 h-6 text-bruise animate-spin-very-slow" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+      <svg class="absolute bottom-40 right-10 w-10 h-10 text-bruise animate-spin-slow" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/></svg>
+  </div>
+
+  <main class="w-full min-h-screen flex flex-col items-center justify-center p-6 relative selection:bg-velvet selection:text-paper py-24">
+
+    <div class="text-center mb-12 relative z-10 animate-fade-in-up">
+        <div class="text-bruise/40 mb-2 text-sm tracking-widest">✦ SPEAK CHANNEL ✦</div>
+        <h1 class="font-serif text-5xl md:text-7xl italic text-ink drop-shadow-sm mb-4">
+            Let's talk!
+        </h1>
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-bruise/60">Send me a message.</p>
+    </div>
+
+    <div class="w-full max-w-2xl paper-card p-8 md:p-12 relative z-10 animate-fade-in-up delay-200">
+        
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#dcd6c5] rounded-b-xl shadow-inner border border-[#c5bead]"></div>
+
+        <div class="flex flex-col items-center mb-12 relative group">
+            <div class="w-40 h-40 md:w-48 md:h-48 relative rounded-xl overflow-hidden border-[3px] border-[#dcd6c5] shadow-md rotate-2 group-hover:rotate-0 transition-all duration-500 ease-out bg-[#dcd6c5]">
+                <img 
+                    src="/mecutie.jpeg" 
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 mix-blend-multiply"
+                />
+                 <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30 mix-blend-overlay pointer-events-none"></div>
+            </div>
+            <div class="absolute -top-2 -left-2 w-8 h-8 bg-[#dcd6c5]/80 rotate-45 opacity-70"></div>
+            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-[#dcd6c5]/80 rotate-45 opacity-70"></div>
+
+            <p class="font-sans text-[10px] tracking-[0.3em] uppercase text-bruise/40 mt-4 text-center">Emilia Arriaga</p>
+        </div>
+
+        <form action="https://formspree.io/f/myzraazq" method="POST" class="flex flex-col gap-10">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="relative">
+                    <input type="text" name="name" id="name" required 
+                           class="peer w-full bg-transparent border-b border-bruise/20 py-2 font-mono text-ink focus:outline-none focus:border-velvet transition-colors placeholder-transparent"
+                           placeholder="Name" />
+                    <label for="name" class="absolute left-0 -top-3 text-xs font-sans uppercase tracking-widest text-bruise/50 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-velvet transition-all cursor-text">
+                        Name
+                    </label>
+                </div>
+
+                <div class="relative">
+                    <input type="email" name="email" id="email" required 
+                           class="peer w-full bg-transparent border-b border-bruise/20 py-2 font-mono text-ink focus:outline-none focus:border-velvet transition-colors placeholder-transparent"
+                           placeholder="Email" />
+                    <label for="email" class="absolute left-0 -top-3 text-xs font-sans uppercase tracking-widest text-bruise/50 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-velvet transition-all cursor-text">
+                        Email
+                    </label>
+                </div>
+            </div>
+
+            <div class="relative mt-4">
+                <textarea name="message" id="message" rows="4" required
+                          class="peer w-full bg-transparent border-b border-bruise/20 py-2 font-mono text-ink focus:outline-none focus:border-velvet transition-colors placeholder-transparent resize-none"></textarea>
+                <label for="message" class="absolute left-0 -top-3 text-xs font-sans uppercase tracking-widest text-bruise/50 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-velvet transition-all cursor-text">
+                    Message
+                </label>
+            </div>
+
+            <div class="flex justify-end pt-4">
+                <button type="submit" class="group flex items-center gap-3 font-serif italic text-xl text-ink hover:text-velvet transition-colors">
+                    <span>Transmit message</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <footer class="w-full py-12 text-center relative z-30 mt-12 border-t border-bruise/10">
+        <p class="font-sans text-xs tracking-widest text-bruise/60 uppercase">
+            Developed with <span class="text-velvet text-lg align-middle animate-pulse drop-shadow-sm">♥</span> by <span class="font-serif italic text-ink text-lg normal-case drop-shadow-sm">Macarena</span>
+        </p>
+    </footer>
+
+  </main>
+</Layout>
+
+<style>
+    /* Card Style - Lighter than background for contrast */
+    .paper-card {
+        background-color: #fffdf5; 
+        background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        background-size: 300px;
+        background-blend-mode: multiply;
+        box-shadow: 
+            0 25px 50px -12px rgba(0,0,0,0.15),
+            inset 0 0 80px rgba(166, 139, 115, 0.1); 
+        border-top: 1px solid rgba(255,255,255,0.9);
+        border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    /* Animations */
+    .animate-spin-slow { animation: spin 12s linear infinite; }
+    .animate-spin-very-slow { animation: spin 20s linear infinite; }
+    .animate-fade-in-up { animation: fadeInUp 1.5s ease-out forwards; opacity: 0; transform: translateY(20px); }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+</style>

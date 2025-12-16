@@ -1,0 +1,136 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+    title?: string;
+}
+
+const rawTitle = Astro.props?.title ?? "";
+const title = typeof rawTitle === 'string' && rawTitle.length > 0
+  ? rawTitle
+  : String(rawTitle ?? "Portfolio");
+
+const titleStr = String(title ?? "");
+const pageName = titleStr.includes('|')
+  ? titleStr.split('|')[0].trim()
+  : 'Index';
+
+const isHomePage = Astro.url.pathname === '/';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Emilia Arriaga Portfolio" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+        
+        <title>{title}</title>
+        <ViewTransitions />
+    </head>
+    
+    <body class="bg-paper text-ink antialiased">
+        
+        { !isHomePage && (
+            <nav class="fixed top-8 left-8 z-50 animate-fade-in-up">
+                
+                <div class="group relative h-[40px]">
+                    
+                    <div class="absolute inset-0 bg-paper/90 backdrop-blur-md border border-bruise/20 rounded-full shadow-sm transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[120px] group-hover:w-[750px]"></div>
+
+                    <div class="relative h-full flex items-center px-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[120px] group-hover:w-[750px]">
+                        
+                        <div class="absolute left-0 w-full h-full flex items-center justify-center transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-2">
+                            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-bruise whitespace-nowrap">
+                                {pageName}
+                            </span>
+                        </div>
+                
+                        <div class="absolute left-0 top-0 h-full w-[750px] flex items-center justify-evenly opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
+                            
+                            <a href="/" class="nav-link px-2">index</a>
+                            <div class="w-[1px] h-3 bg-bruise/20"></div>
+                            
+                            <a href="/about" class="nav-link px-2">about me</a>
+                            <div class="w-[1px] h-3 bg-bruise/20"></div>
+                            
+                            <a href="/work" class="nav-link px-2">experience</a>
+                            <div class="w-[1px] h-3 bg-bruise/20"></div>
+
+                            <a href="/contact" class="nav-link px-2">contact</a>
+                            <div class="w-[1px] h-3 bg-bruise/20"></div>
+                            
+                            <a href="https://www.linkedin.com/in/emilia-arriaga-0a7a632b2" target="_blank" class="nav-link hover:text-[#0077b5] px-2">linkedin</a>
+                            <div class="w-[1px] h-3 bg-bruise/20"></div>
+                            
+                            <a href="https://github.com/skinnygor33" target="_blank" class="nav-link hover:text-black px-2">github</a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        )}
+
+        <div class="fixed inset-0 pointer-events-none opacity-[0.04] z-[40] mix-blend-overlay" 
+             style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');">
+        </div>
+
+        <slot /> 
+        
+        <script>
+            import Lenis from '@studio-freight/lenis';
+
+            function initScripts() {
+                const lenis = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                });
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
+            }
+
+            initScripts();
+            document.addEventListener('astro:page-load', initScripts);
+        </script>
+    </body>
+</html>
+
+<style is:global>
+    html {
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    .nav-link {
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #5C4B4B; 
+        transition: all 0.3s ease;
+        position: relative;
+        white-space: nowrap; 
+    }
+    .nav-link:hover {
+        color: #722F37; /* Velvet */
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F2F0E9; }
+    ::-webkit-scrollbar-thumb { background: #5C4B4B; border-radius: 4px; }
+</style>

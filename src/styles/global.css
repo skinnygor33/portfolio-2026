@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+.bottom-left-text {
+    /* 1. Force the text itself to the right */
+    text-align: right !important; 
+
+    /* 2. If the parent is a Flexbox, this pushes the block to the right end */
+    align-self: flex-end !important;
+
+    /* 3. If it's a standard block, this pushes the margins */
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    
+    /* Ensure the container spans the width so text can move */
+    width: 100%; 
+    display: block;
+
+    /* spacing */
+    margin-top: 120px;
+    
+    /* Styling */
+    color: #333;
+}
