@@ -1,5 +1,6 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
     title?: string;
@@ -28,10 +29,10 @@ const isHomePage = Astro.url.pathname === '/';
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400&family=UnifrakturMaguntia&family=Special+Elite&family=Playfair+Display:ital,wght@0,700;1,700&family=IM+Fell+English:ital@1&display=swap" rel="stylesheet">
         
         <title>{title}</title>
-        <ViewTransitions />
+        <ClientRouter />
     </head>
     
     <body class="bg-paper text-ink antialiased">
