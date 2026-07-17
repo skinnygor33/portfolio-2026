@@ -162,48 +162,78 @@ const title = typeof rawTitle === 'string' ? rawTitle : String(rawTitle ?? 'Abou
       </div>
     </section>
 
-    <section class="min-h-screen px-6 py-24 flex flex-col justify-center items-center text-center relative z-10 bg-transparent">
+    <section class="min-h-screen px-6 py-24 flex flex-col justify-center items-center text-center relative z-10 bg-transparent overflow-hidden">
       
       <div class="relative mb-20 flex flex-col items-center">
-          <div class="text-bruise/40 mb-4 text-xl">✦ ══════════ ✦</div>
-          <h2 class="font-serif text-5xl md:text-6xl italic font-bold text-[#2a1f1a] drop-shadow-[0_4px_3px_rgba(0,0,0,0.3)] tracking-wider relative z-10 px-8">
-            Current Obsessions
+          <p class="font-heading text-xs tracking-[0.35em] uppercase mb-4">Kept Company</p>
+          <h2 class="font-heading text-5xl md:text-6xl italic font-bold tracking-wide relative z-10 px-8">
+            Faces I Keep Close
           </h2>
-          <div class="text-bruise/40 mt-4 text-xl">✦ ══════════ ✦</div>
-          <div class="w-24 h-[2px] bg-gradient-to-r from-transparent via-bruise/30 to-transparent mt-6"></div>
+          <svg class="flourish mx-auto mt-4" width="90" height="14" viewBox="0 0 90 14" aria-hidden="true">
+            <path d="M2,7 Q22,1 45,7 Q68,13 88,7" />
+            <circle cx="45" cy="7" r="1.6" />
+          </svg>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-5xl">
-        
-        <div class="flex flex-col items-center space-y-4 group cursor-pointer">
-            <div class="w-full aspect-[3/4] bg-bruise/5 border border-bruise/10 overflow-hidden relative group-hover:border-velvet/30 transition-colors">
-                 <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-700"/>
-            </div>
-            <span class="font-sans text-xs tracking-widest uppercase text-bruise group-hover:text-velvet transition-colors">Ethical Hacking</span>
+      <div class="clothesline-wrap w-full max-w-5xl">
+        <div class="rope"></div>
+        <div class="clothesline">
+          <div class="photo-item" style="--sway-dur: 6.5s; --sway-delay: 0s; --rot: -4deg;">
+            <span class="pin"></span>
+            <img src="/images/gallery/photo-1.jpg" alt="" />
+          </div>
+          <div class="photo-item" style="--sway-dur: 7.2s; --sway-delay: 0.4s; --rot: 3deg;">
+            <span class="pin"></span>
+            <img src="/images/gallery/photo-2.jpg" alt="" />
+          </div>
+          <div class="photo-item" style="--sway-dur: 5.8s; --sway-delay: 0.9s; --rot: -2deg;">
+            <span class="pin"></span>
+            <img src="/images/gallery/photo-3.jpg" alt="" />
+          </div>
+          <div class="photo-item" style="--sway-dur: 6.9s; --sway-delay: 0.2s; --rot: 5deg;">
+            <span class="pin"></span>
+            <img src="/images/gallery/photo-4.jpg" alt="" />
+          </div>
+          <div class="photo-item" style="--sway-dur: 6.2s; --sway-delay: 1.1s; --rot: -3deg;">
+            <span class="pin"></span>
+            <img src="/images/gallery/photo-5.jpg" alt="" />
+          </div>
+          <div class="photo-item" style="--sway-dur: 7.5s; --sway-delay: 0.6s; --rot: 2deg;">
+            <span class="pin"></span>
+            <img src="/images/gallery/photo-6.jpg" alt="" />
+          </div>
         </div>
-
-        <div class="flex flex-col items-center space-y-4 group cursor-pointer">
-            <div class="w-full aspect-[3/4] bg-bruise/5 border border-bruise/10 overflow-hidden relative group-hover:border-velvet/30 transition-colors">
-                 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-700"/>
-            </div>
-            <span class="font-sans text-xs tracking-widest uppercase text-bruise group-hover:text-velvet transition-colors">Software Development</span>
-        </div>
-
-        <div class="flex flex-col items-center space-y-4 group cursor-pointer">
-            <div class="w-full aspect-[3/4] bg-bruise/5 border border-bruise/10 overflow-hidden relative group-hover:border-velvet/30 transition-colors">
-                 <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-700"/>
-            </div>
-            <span class="font-sans text-xs tracking-widest uppercase text-bruise group-hover:text-velvet transition-colors">Artificial Intelligence</span>
-        </div>
-
-        <div class="flex flex-col items-center space-y-4 group cursor-pointer">
-            <div class="w-full aspect-[3/4] bg-bruise/5 border border-bruise/10 overflow-hidden relative group-hover:border-velvet/30 transition-colors">
-                 <img src="https://images.unsplash.com/photo-1525362081669-2b476bb628c3?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-700"/>
-            </div>
-            <span class="font-sans text-xs tracking-widest uppercase text-bruise group-hover:text-velvet transition-colors">Alternative Pop</span>
-        </div>
-
       </div>
+    </section>
+
+    <section class="min-h-screen px-6 py-24 flex flex-col justify-center items-center text-center relative z-10 bg-transparent">
+
+      <div class="relative mb-16 flex flex-col items-center">
+          <p class="font-heading text-xs tracking-[0.35em] uppercase mb-4">On Repeat</p>
+          <h2 class="font-heading text-5xl md:text-6xl italic font-bold tracking-wide relative z-10 px-8">
+            What's Playing
+          </h2>
+          <svg class="flourish mx-auto mt-4" width="90" height="14" viewBox="0 0 90 14" aria-hidden="true">
+            <path d="M2,7 Q22,1 45,7 Q68,13 88,7" />
+            <circle cx="45" cy="7" r="1.6" />
+          </svg>
+      </div>
+
+      <div id="spotify-wrap" class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <p class="font-heading text-sm italic mb-6 opacity-70">Recently Streamed</p>
+          <div id="spotify-tracks" class="space-y-3 text-left">
+            <p class="font-sans text-sm opacity-50">Loading...</p>
+          </div>
+        </div>
+        <div>
+          <p class="font-heading text-sm italic mb-6 opacity-70">Most Streamed Artist</p>
+          <div id="spotify-artist" class="text-left">
+            <p class="font-sans text-sm opacity-50">Loading...</p>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <footer class="w-full py-12 text-center relative z-10 mb-12">
@@ -220,7 +250,7 @@ const title = typeof rawTitle === 'string' ? rawTitle : String(rawTitle ?? 'Abou
   const woodLayer = () => document.getElementById('wood-layer');
   const trigger = () => document.querySelector('.trigger-dark-mode');
 
-  function setWoodVisible(visible) {
+  function setWoodVisible(visible: boolean) {
     const el = woodLayer();
     if (!el) return;
     if (visible) el.classList.remove('opacity-0');
@@ -232,14 +262,12 @@ const title = typeof rawTitle === 'string' ? rawTitle : String(rawTitle ?? 'Abou
     const w = woodLayer();
     if (!t || !w) return;
 
-    // IntersectionObserver is deterministic for this UI change
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => setWoodVisible(e.isIntersecting));
     }, { threshold: 0.25, rootMargin: '0px 0px -20% 0px' });
 
     obs.observe(t);
 
-    // immediate deterministic check (handles client navs / Lenis timing)
     setTimeout(() => {
       const rect = t.getBoundingClientRect();
       const vh = window.innerHeight || document.documentElement.clientHeight;
@@ -255,6 +283,62 @@ const title = typeof rawTitle === 'string' ? rawTitle : String(rawTitle ?? 'Abou
 })();
 </script>
 
+<script>
+  async function loadSpotify() {
+    const tracksEl = document.getElementById('spotify-tracks');
+    const artistEl = document.getElementById('spotify-artist');
+    if (!tracksEl || !artistEl) return;
+
+    try {
+      const res = await fetch('/api/spotify');
+      const data = await res.json() as {
+        tracks?: Array<{
+          url: string;
+          albumArt: string;
+          name: string;
+          artist: string;
+        }>;
+        topArtist?: {
+          url: string;
+          image: string;
+          name: string;
+        };
+      };
+
+      if (data.tracks && data.tracks.length) {
+        tracksEl.innerHTML = data.tracks.map(t => `
+          <a href="${t.url}" target="_blank" class="spotify-track">
+            <img src="${t.albumArt}" alt="" />
+            <div>
+              <p class="track-name">${t.name}</p>
+              <p class="track-artist">${t.artist}</p>
+            </div>
+          </a>
+        `).join('');
+      } else {
+        tracksEl.innerHTML = `<p class="font-sans text-sm opacity-50">No recent tracks found.</p>`;
+      }
+
+      if (data.topArtist) {
+        artistEl.innerHTML = `
+          <a href="${data.topArtist.url}" target="_blank" class="spotify-artist">
+            <img src="${data.topArtist.image}" alt="" />
+            <p class="artist-name">${data.topArtist.name}</p>
+          </a>
+        `;
+      } else {
+        artistEl.innerHTML = `<p class="font-sans text-sm opacity-50">No top artist found.</p>`;
+      }
+    } catch (err) {
+      tracksEl.innerHTML = `<p class="font-sans text-sm opacity-50">Couldn't load Spotify data.</p>`;
+      artistEl.innerHTML = '';
+    }
+  }
+
+  loadSpotify();
+  document.addEventListener('astro:page-load', loadSpotify);
+</script>
+
 <style>
     /* 1. PHYSICAL PAPER CARD STYLE */
     .paper-card {
@@ -263,12 +347,10 @@ const title = typeof rawTitle === 'string' ? rawTitle : String(rawTitle ?? 'Abou
         background-size: 300px;
         background-blend-mode: multiply;
         
-        /* Deep shadows + Inset vignette for realism */
         box-shadow: 
             0 20px 40px -5px rgba(0,0,0,0.3),
             inset 0 0 80px rgba(166, 139, 115, 0.15); 
         
-        /* Cardstock edge highlight */
         border-top: 1px solid rgba(255,255,255,0.8);
         border-bottom: 1px solid rgba(0,0,0,0.05);
     }
@@ -306,4 +388,115 @@ const title = typeof rawTitle === 'string' ? rawTitle : String(rawTitle ?? 'Abou
     }
     .animate-spin-slow { animation: spin 12s linear infinite; }
     @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* ---- Aesthetic match: headings (shared with index) ---- */
+    .font-heading {
+        font-family: 'Playfair Display', serif;
+        color: #4a3a2c;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+    .flourish path, .flourish circle {
+        stroke: #a4645a;
+        fill: none;
+        stroke-width: 1;
+        opacity: 0.6;
+    }
+    .flourish circle { fill: #a4645a; stroke: none; }
+
+    /* ---- Clothesline gallery ---- */
+    .clothesline-wrap {
+        position: relative;
+        padding-top: 30px;
+    }
+    .rope {
+        position: absolute;
+        top: 0;
+        left: 2%;
+        right: 2%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(74,58,44,0.5) 8%, rgba(74,58,44,0.5) 92%, transparent);
+    }
+    .clothesline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem 2rem;
+        padding-top: 10px;
+    }
+    .photo-item {
+        position: relative;
+        width: 140px;
+        height: 175px;
+        transform-origin: top center;
+        animation: sway var(--sway-dur) ease-in-out var(--sway-delay) infinite;
+    }
+    @media (min-width: 768px) {
+        .photo-item { width: 170px; height: 210px; }
+    }
+    @keyframes sway {
+        0%, 100% { transform: rotate(var(--rot)); }
+        50% { transform: rotate(calc(var(--rot) * -1)); }
+    }
+    .photo-item:hover {
+        animation-play-state: paused;
+        transform: rotate(0deg) scale(1.06);
+        z-index: 5;
+    }
+    .pin {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #c9857a, #7a3a35);
+        box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+        z-index: 2;
+    }
+    .photo-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border: 6px solid #f5efe0;
+        box-shadow: 3px 6px 12px rgba(0,0,0,0.35);
+        filter: grayscale(1) contrast(1.05);
+        transition: filter 0.6s ease, box-shadow 0.4s ease;
+    }
+    .photo-item:hover img {
+        filter: grayscale(0) contrast(1.05);
+        box-shadow: 3px 6px 20px rgba(0,0,0,0.45);
+    }
+
+    /* ---- Spotify cards ---- */
+    .spotify-track {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.6rem;
+        border-bottom: 1px solid rgba(74,58,44,0.12);
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+    .spotify-track:hover { background: rgba(74,58,44,0.05); }
+    .spotify-track img {
+        width: 48px; height: 48px; object-fit: cover; flex-shrink: 0;
+        box-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+    }
+    .track-name { font-family: 'Playfair Display', serif; font-style: italic; color: #2a1f1a; }
+    .track-artist { font-family: sans-serif; font-size: 0.75rem; opacity: 0.6; }
+
+    .spotify-artist {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+    }
+    .spotify-artist img {
+        width: 90px; height: 90px; object-fit: cover; border-radius: 50%;
+        filter: grayscale(0.3);
+        box-shadow: 3px 4px 10px rgba(0,0,0,0.3);
+    }
+    .artist-name { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.4rem; color: #2a1f1a; }
 </style>
