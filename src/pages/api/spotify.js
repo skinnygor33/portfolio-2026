@@ -6,12 +6,11 @@ export async function GET() {
   const refresh_token = import.meta.env.SPOTIFY_REFRESH_TOKEN;
 
   try {
-    // Exchange refresh token for a fresh access token
     const tokenRes = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: 'Basic ' + Buffer.from(`${client_id}:${client_secret}`).toString('base64'),
+        Authorization: 'Basic ' + btoa(`${client_id}:${client_secret}`),
       },
       body: new URLSearchParams({
         grant_type: 'refresh_token',
@@ -22,7 +21,7 @@ export async function GET() {
     const access_token = tokenData.access_token;
 
     if (!access_token) {
-      return new Response(JSON.stringify({ error: 'Failed to refresh token' }), { status: 500 });
+      return new Response(JSON.stringify({ error: 'Failed to refresh token', details: tokenData }), { status: 500 });
     }
 
     const headers = { Authorization: `Bearer ${access_token}` };
@@ -55,6 +54,6 @@ export async function GET() {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err) {
-    return new Response(JSON.stringify({ error: 'Spotify fetch failed' }), { status: 500 });
+    return new Response(JSON.stringify({ error: 'Spotify fetch failed', message: err.message }), { status: 500 });
   }
 }
