@@ -23,7 +23,7 @@ const isHomePage = Astro.url.pathname === '/';
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Emilia Arriaga Portfolio" />
+        <meta name="description" content="Macarena Arriaga Portfolio" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         
@@ -39,37 +39,37 @@ const isHomePage = Astro.url.pathname === '/';
         
         { !isHomePage && (
             <nav class="fixed top-8 left-8 z-50 animate-fade-in-up">
-                
-                <div class="group relative h-[40px]">
-                    
-                    <div class="absolute inset-0 bg-paper/90 backdrop-blur-md border border-bruise/20 rounded-full shadow-sm transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[120px] group-hover:w-[750px]"></div>
 
-                    <div class="relative h-full flex items-center px-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[120px] group-hover:w-[750px]">
-                        
+                <div class="group relative h-[40px]">
+
+                    <div class="nav-pill-bg absolute inset-0 rounded-md transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[120px] group-hover:w-[760px]"></div>
+
+                    <div class="relative h-full flex items-center px-6 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-[120px] group-hover:w-[760px]">
+
                         <div class="absolute left-0 w-full h-full flex items-center justify-center transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-2">
-                            <span class="font-sans text-[10px] tracking-[0.25em] uppercase text-bruise whitespace-nowrap">
+                            <span class="nav-pagename whitespace-nowrap">
                                 {pageName}
                             </span>
                         </div>
-                
-                        <div class="absolute left-0 top-0 h-full w-[750px] flex items-center justify-evenly opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
-                            
+
+                        <div class="absolute left-0 top-0 h-full w-[760px] flex items-center justify-evenly opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
+
                             <a href="/" class="nav-link px-2">index</a>
-                            <div class="w-[1px] h-3 bg-bruise/20"></div>
-                            
+                            <span class="nav-divider">✦</span>
+
                             <a href="/about" class="nav-link px-2">about me</a>
-                            <div class="w-[1px] h-3 bg-bruise/20"></div>
-                            
+                            <span class="nav-divider">✦</span>
+
                             <a href="/work" class="nav-link px-2">experience</a>
-                            <div class="w-[1px] h-3 bg-bruise/20"></div>
+                            <span class="nav-divider">✦</span>
 
                             <a href="/contact" class="nav-link px-2">contact</a>
-                            <div class="w-[1px] h-3 bg-bruise/20"></div>
-                            
-                            <a href="https://www.linkedin.com/in/emilia-arriaga-0a7a632b2" target="_blank" class="nav-link hover:text-[#0077b5] px-2">linkedin</a>
-                            <div class="w-[1px] h-3 bg-bruise/20"></div>
-                            
-                            <a href="https://github.com/skinnygor33" target="_blank" class="nav-link hover:text-black px-2">github</a>
+                            <span class="nav-divider">✦</span>
+
+                            <a href="https://www.linkedin.com/in/emilia-arriaga-0a7a632b2" target="_blank" class="nav-link px-2">linkedin</a>
+                            <span class="nav-divider">✦</span>
+
+                            <a href="https://github.com/skinnygor33" target="_blank" class="nav-link px-2">github</a>
 
                         </div>
                     </div>
@@ -105,22 +105,56 @@ const isHomePage = Astro.url.pathname === '/';
 </html>
 
 <style is:global>
+    html, body {
+    overflow-x: hidden;
+    }
     html {
         font-family: 'Inter', system-ui, sans-serif;
     }
     
-    .nav-link {
-        font-family: 'Inter', sans-serif;
-        font-size: 10px;
+    .nav-pill-bg {
+        background-color: rgba(242, 233, 212, 0.92);
+        background-image:
+            repeating-linear-gradient(112deg, rgba(0,0,0,0.035) 0px, rgba(0,0,0,0.035) 1px, transparent 1px, transparent 4px),
+            radial-gradient(ellipse 70% 60% at 25% 20%, rgba(70,45,25,0.08), transparent 70%);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(58,46,34,0.22);
+        box-shadow:
+            0 8px 20px rgba(20,12,8,0.25),
+            0 2px 6px rgba(20,12,8,0.15),
+            0 0 0 1px rgba(255,255,255,0.15) inset;
+    }
+
+    .nav-pagename {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #5C4B4B; 
+        color: #3a2e22;
+    }
+
+    .nav-link {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #3a2e22;
         transition: all 0.3s ease;
         position: relative;
-        white-space: nowrap; 
+        white-space: nowrap;
     }
     .nav-link:hover {
         color: #722F37; /* Velvet */
+        text-shadow: 0 0 10px rgba(114,47,55,0.25);
+    }
+
+    .nav-divider {
+        color: rgba(164,100,90,0.45);
+        font-size: 7px;
     }
 
     .animate-fade-in-up {
