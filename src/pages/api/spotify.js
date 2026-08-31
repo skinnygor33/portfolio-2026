@@ -28,7 +28,7 @@ export async function GET() {
 
     const [recentRes, topArtistsRes] = await Promise.all([
       fetch('https://api.spotify.com/v1/me/player/recently-played?limit=5', { headers }),
-      fetch('https://api.spotify.com/v1/me/top/artists?limit=1&time_range=short_term', { headers }),
+      fetch('https://api.spotify.com/v1/me/top/artists?limit=5&time_range=short_term', { headers }),
     ]);
 
     const recentData = await recentRes.json();
@@ -41,15 +41,16 @@ export async function GET() {
       url: item.track.external_urls.spotify,
     }));
 
-    const topArtist = topArtistsData.items?.[0]
-      ? {
-          name: topArtistsData.items[0].name,
-          image: topArtistsData.items[0].images?.[1]?.url || topArtistsData.items[0].images?.[0]?.url,
-          url: topArtistsData.items[0].external_urls.spotify,
-        }
-      : null;
+    const artists = (topArtistsData.items || []).map((artist) => ({
+      name: artist.name,
+      image: artist.images?.[1]?.url || artist.images?.[0]?.url,
+      url: artist.external_urls.spotify,
+    }));
 
-    return new Response(JSON.stringify({ tracks, topArtist }), {
+    const topArtist = artists[0] || null;
+    const moreArtists = artists.slice(1, 5);
+
+    return new Response(JSON.stringify({ tracks, topArtist, moreArtists }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
